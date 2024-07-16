@@ -33,10 +33,10 @@ L.control
     .addTo(myMap);
 
 let prisonInmates = new L.layerGroup();
-
+d3.json("https://raw.githubusercontent.com/DDragan24/Project-3-TeamRavenClaw/main/Resources/txJsonified.json").
 then(function(InmateData){
     //check if the data is in the site
-    console.log(csvtojson);
+    console.log(InmateData);
 });
 
 //add prisonInmates to map
