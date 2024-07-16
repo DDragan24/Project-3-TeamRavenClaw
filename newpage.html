@@ -1,0 +1,9 @@
+csvtojson()
+  .fromFile("C:\Users\JPHin\OneDrive\Documents\Github2\Project 3\Project-3-TeamRavenClaw\Resources\tx_deathrow_full.csv")  // Specify the path to your CSV file
+  .then((jsonObj) => {
+    fs.writeFileSync('output.json', JSON.stringify(jsonObj, null, 2));
+    console.log('Conversion completed. JSON data saved to output.json');
+  })
+  .catch((err) => {
+    console.error('An error occurred:', err);
+  });
