@@ -33,11 +33,16 @@ L.control
     .addTo(myMap);
 
 let prisonInmates = new L.layerGroup();
-d3.json("https://raw.githubusercontent.com/DDragan24/Project-3-TeamRavenClaw/main/Resources/txJsonified.json").
-then(function(InmateData){
+d3.json("merged.json")
+.then(function(InmateData){
     //check if the data is in the site
     console.log(InmateData);
-});
+    //make an emptyarray to grab the counties
+    var counties = [];
+    
+    }).addTo(prisonInmates);  
+
+
 
 //add prisonInmates to map
-//prisonInmates.addTo(myMap);
+prisonInmates.addTo(myMap);
