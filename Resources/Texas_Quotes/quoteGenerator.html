@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Texas Death Row Inmate Last Statements</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <h1>Texas Death Row Inmate Last Statements</h1>
+    <button id="generateButton">Generate Last Statement</button>
+    <div id="quoteDisplay"></div>
+
+    <script>
+        // Parse the CSV data and store the quotes and associated information
+        let quotesData = [];
+
+        Papa.parse('merged_data.csv', {
+            header: true,
+            download: true,
+            dynamicTyping: true,
+            complete: function(results) {
+                quotesData = results.data;
+            }
+        });
+
+        // Function to generate a random quote with associated information
+        function generateRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotesData.length);
+            const randomQuote = quotesData[randomIndex];
+            return randomQuote;
+        }
+
+        // Display the quote and associated information when the button is clicked
+        const generateButton = document.getElementById('generateButton');
+        generateButton.addEventListener('click', function() {
+            const quoteDisplay = document.getElementById('quoteDisplay');
+            const randomQuote = generateRandomQuote();
+
+            quoteDisplay.innerHTML = `
+                <p><strong>Quote:</strong> ${randomQuote['Last Statement']}</p>
+                <p><strong>First Name:</strong> ${randomQuote['First Name']}</p>
+                <p><strong>Last Name:</strong> ${randomQuote['Last Name']}</p>
+                <p><strong>Execution Date:</strong> ${randomQuote['Execution Date']}</p>
+            `;
+        });
+
+    </script>
+</body>
+</html>
