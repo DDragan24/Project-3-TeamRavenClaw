@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>County Centroid Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+  <div id="map" style="height: 400px;"></div>
+
+  <script>
+    let centroidLocations;
+
+    Papa.parse("merged_data.csv", {
+      header: true,
+      download: true,
+      complete: function(results) {
+        centroidLocations = results.data.map(row => {
+          // Extract coordinates from "County Centroid Location" column
+          const pointString = row["County Centroid Location"];
+
+          if (pointString) {
+            const coordinatesMatch = pointString.match(/-?\d+\.\d+/g);
+
+            if (coordinatesMatch && coordinatesMatch.length === 2) {
+              const [longitude, latitude] = coordinatesMatch.map(parseFloat);
+
+              return {
+                type: "Feature",
+                geometry: {
+                  type: "Point",
+                  coordinates: [longitude, latitude]
+                },
+                properties: {
+                  name: "County Centroid"
+                }
+              };
+            } else {
+              console.error(`Invalid format for point: ${pointString}`);
+              return null; // Skip this entry
+            }
+          } else {
+            console.error("Point string is undefined");
+            return null; // Skip this entry
+          }
+        }).filter(entry => entry !== null); // Remove any null entries
+
+        const geojsonData = {
+          type: "FeatureCollection",
+          features: centroidLocations
+        };
+
+        const map = L.map('map').setView([0, 0], 2);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        L.geoJSON(geojsonData, {
+          pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, { radius: 5 });
+          }
+        }).addTo(map);
+      }
+    });
+  </script>
+</body>
+</html>
+
+
