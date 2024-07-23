@@ -62,8 +62,6 @@ While collecting data and web-scraping for our project, we spent time reviewing 
 
 
 ## Directory
-### Proposal 
-https://github.com/DDragan24/Project-3-TeamRavenClaw/blob/main/Proposal
 ### Resources 
 https://github.com/DDragan24/Project-3-TeamRavenClaw/tree/main/Resources
 ### Script
