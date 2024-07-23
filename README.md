@@ -80,9 +80,9 @@ While collecting data and web-scraping for our project, we spent time reviewing 
 https://github.com/DDragan24/Project-3-TeamRavenClaw/blob/main/Proposal
 ### Resources 
 https://github.com/DDragan24/Project-3-TeamRavenClaw/tree/main/Resources
-### Scripts
+### Script
 https://github.com/DDragan24/Project-3-TeamRavenClaw/tree/main/Scripts
-### Visualizations & Interactive Components   
+### Website  
 
 ### ERD   
 https://dbdiagram.io/d   
