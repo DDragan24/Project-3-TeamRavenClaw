@@ -68,7 +68,7 @@ https://github.com/DDragan24/Project-3-TeamRavenClaw/tree/main/Resources
 ### Script
 https://github.com/DDragan24/Project-3-TeamRavenClaw/tree/main/Scripts
 ### Website  
-
+https://jphinshaw.github.io/TxDeathRowData/index.html
 ### ERD   
 https://dbdiagram.io/d   
 ### Presentation
