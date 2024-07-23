@@ -32,19 +32,10 @@ After collecting the datasets, we decided on key points to address in our projec
 
 ### Data Transformation
 To kick off our project we used Pandas in Jupyter Notebook to transform our data before importing it into a database. During this stage, CSV files were read, columns were manipulated, and DataFrames were created, merged, and cleaned. We removed data that was not relevant to our project, reduced redundancy in the data, and organized the combined data for easier use in future applications.
+
 At this point in our project, each team member split off to perform their chosen tasks in the transformation process (data visualizations, web scraping, database design, etc).   
 
-*
-* Detailed breakdown of the process
-*
-
-Data Loading
 The data we collected is relational. For this reason, we chose to import/load our data in a relational database, PostgreSQL. PostgreSQL is an easy-to-use database, which enabled our team to seamlessly link the data and other components of our project.
-
-*
-* How data is read and displayed for future use
-*
-  
 
 ### Analysis
 We analyzed our data using the following techniques:     
@@ -53,27 +44,21 @@ Summation aggregation > GeoJson Visualization / All Variable Trends
 Correlation Analysis > Time and Location Variable Trends     
 Comparison Analysis > All Variable Comparison     
 Time-series Analysis > Yearly Execution Count / GeoJson Visualization     
-Draft potential solutions:     
-•	  
-Discuss your conclusions and insights from studying the problem:  
-•	  
 
 ## Ethical Considerations
 While collecting data and web-scraping for our project, we spent time reviewing data ethics, specifically terms of use/licensing, copyright protections, and methods of data collection used to gather the datasets we were interested in using. After we had outlined our project, we created a ‘data ethics’ checklist for our sources. We made sure that each source came from a reputable entity that cited their sources. By doing so, we knew that our desired datasets were not gathered illegally. Checking for copyright protections and reviewing terms of use were on our checklist as well. Fortunately, most of the data sources we considered pulling datasets from were authorized to be used by the public and were not restricted from use in school projects or personal use.
 ### Workload Distribution
-#### Aaron Sell >
+#### Aaron Sell > data collection; matplotlib and seaborn visualizations
 
-#### Ange Ndjeka > 
+#### Ange Ndjeka > data collection
 
-#### Denis Dragan >
+#### Denis Dragan > data collection; website construction
 
-#### Jason Hinshaw >
+#### Jason Hinshaw > data collection; website construction; postgreSQL database
 
-#### Tim Barney >
+#### Tim Barney > data collection
 
-#### Summer Dowdy > Data Collection; README.md; Entity Relationship Diagram (ERD)
-
-## Instructions | Interaction Guide
+#### Summer Dowdy > Data Collection; README.md
 
 ## Directory
 ### Proposal 
@@ -92,11 +77,17 @@ https://dbdiagram.io/d
 ## References
 Death Penalty Information Center. (2024, July 17). Execution Database. DPIC. https://deathpenaltyinfo.org/database/executions
 
-OpenDataSoft. (2017, June 27). US County Boundaries. Public.opendatasoft.com; U.S. Census Bureau. https://hifld-geoplatform.opendata.arcgis.com/datasets/us-county-boundaries
+Holistics. (2024, July 20). dbdiagram.io - Database Relationship Diagrams Design Tool. Dbdiagram.io; Holistics. https://dbdiagram.io/d
+
+J. D. Hunter, "Matplotlib: A 2D Graphics Environment", Computing in Science & Engineering, vol. 9, no. 3, pp. 90-95, 2007. 
+
+opendatasoft. (2017, June 27). US County Boundaries. Hifld-Geoplatform.opendata.arcgis.com; U.S. Census Bureau. https://hifld-geoplatform.opendata.arcgis.com/datasets/us-county-boundaries
 
 Srivastava, P. (2023). Texas Deathrow Full Dataset. Kaggle.com. https://www.kaggle.com/datasets/srivastavaprakhar07/texas-deathrow-full-dataset
 
 Tenneri, M. (2023). US State and Territory Latitude and Longitude Data (P. Sruthi , Ed.). Kaggle.com. https://www.kaggle.com/datasets/tennerimaheshwar/us-state-and-territory-latitude-and-longitude-data
 
 Texas Open Data Portal Administrator. (n.d.). Texas Counties Centroid Map. Data.texas.gov. Retrieved July 17, 2024, from https://data.texas.gov/widgets/ups3-9e8m?mobile_redirect=true
+
+Waskom, M. L., (2021). seaborn: statistical data visualization. Journal of Open Source Software, 6(60), 3021, https://seaborn.pydata.org/index.html 
 
