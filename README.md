@@ -22,6 +22,9 @@ https://www.kaggle.com/datasets/srivastavaprakhar07/texas-deathrow-full-dataset
 The second dataset we found contains data specifically from executed inmates in Texas and includes demographic information as well as their last words.   
 https://deathpenaltyinfo.org/database/executions    
 
+Our final dataset came from Texas.gov. It provided us with the coordinates necessary to create out GeoJson.
+https://data.texas.gov/widgets/ups3-9e8m?mobile_redirect=true  
+
 After collecting the datasets, we decided on key points to address in our project:   
 •	Which areas (cities/counties, states, regions) hold the greatest number of executions? Lowest number of executions?   
 •	What trends in demographic variables (age, gender, race, etc.) were present among inmates who were executed?   
