@@ -1,4 +1,4 @@
-# Project 3 | Data Engineering
+# Project 3 | Data Engineering & Visualization
 # Team Ravenclaw
 
 ## Overview
@@ -58,7 +58,8 @@ While collecting data and web-scraping for our project, we spent time reviewing 
 
 #### Tim Barney > data collection
 
-#### Summer Dowdy > Data Collection; README.md
+#### Summer Dowdy > Data Collection; README
+
 
 ## Directory
 ### Proposal 
@@ -69,8 +70,6 @@ https://github.com/DDragan24/Project-3-TeamRavenClaw/tree/main/Resources
 https://github.com/DDragan24/Project-3-TeamRavenClaw/tree/main/Scripts
 ### Website  
 https://jphinshaw.github.io/TxDeathRowData/index.html
-### ERD   
-https://dbdiagram.io/d   
 ### Presentation
 
       
