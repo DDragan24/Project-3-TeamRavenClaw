@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Texas Death Row Inmate Last Statements</title>
+    <!-- Add Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Texas Death Row Inmate Last Statements</h1>
+        <button id="generateButton" class="btn btn-primary mt-3">Generate Last Statement</button>
+        <div id="quoteDisplay" class="mt-3"></div>
+        <a href="index.html">Go back to homepage</a>
+    </div>
+
+    <script>
+        // Parse the CSV data and store the quotes and associated information
+        let quotesData = [];
+
+        Papa.parse('merged_data.csv', {
+            header: true,
+            download: true,
+            dynamicTyping: true,
+            complete: function(results) {
+                quotesData = results.data;
+            }
+        });
+
+        // Function to generate a random quote with associated information
+        function generateRandomQuote() {
+            let filteredQuotes = quotesData.filter(quote => quote['Last Statement'] !== null && quote['Last Statement'] !== '');
+            const randomIndex = Math.floor(Math.random() * filteredQuotes.length);
+            const randomQuote = filteredQuotes[randomIndex];
+            return randomQuote;
+        }
+
+        // Display the quote and associated information when the button is clicked
+        const generateButton = document.getElementById('generateButton');
+        generateButton.addEventListener('click', function() {
+            const quoteDisplay = document.getElementById('quoteDisplay');
+            const randomQuote = generateRandomQuote();
+
+            if (randomQuote) {
+                quoteDisplay.innerHTML = `
+                    <p><strong>Quote:</strong> ${randomQuote['Last Statement']}</p>
+                    <p><strong>First Name:</strong> ${randomQuote['First Name']}</p>
+                    <p><strong>Last Name:</strong> ${randomQuote['Last Name']}</p>
+                    <p><strong>Execution Date:</strong> ${randomQuote['Execution Date']}</p>
+                `;
+            } else {
+                quoteDisplay.innerHTML = '<p>No valid last statements available.</p>';
+            }
+        });
+
+    </script>
+
+    <!-- Add Bootstrap JS from CDN -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

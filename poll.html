@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll: Should Capital Punishment be Legal?</title>
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Poll: Should Capital Punishment be Legal?</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XltuOU1A8Sk?si=aNBIoCnob4pVh1Zw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br><br>
+    <div id="poll" class="container">
+        <button id="yes" class="btn btn-primary">Yes</button>
+        <button id="no" class="btn btn-danger">No</button>
+    </div>
+    <h2>Results:</h2>
+    <p>Yes: <span id="yesCount">0</span></p>
+    <p>No: <span id="noCount">0</span></p>
+    
+    <a href="index.html">Go back to homepage</a> <!-- Add this line for the link -->
+
+    <script src="poll.js"></script>
+    <!-- Add Bootstrap JS link (optional if you need Bootstrap JavaScript features) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
