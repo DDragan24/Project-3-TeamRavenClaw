@@ -51,24 +51,22 @@ Time-series Analysis > Yearly Execution Count / GeoJson Visualization
 ## Ethical Considerations
 While collecting data and web-scraping for our project, we spent time reviewing data ethics, specifically terms of use/licensing, copyright protections, and methods of data collection used to gather the datasets we were interested in using. After we had outlined our project, we created a ‘data ethics’ checklist for our sources. We made sure that each source came from a reputable entity that cited their sources. By doing so, we knew that our desired datasets were not gathered illegally. Checking for copyright protections and reviewing terms of use were on our checklist as well. Fortunately, most of the data sources we considered pulling datasets from were authorized to be used by the public and were not restricted from use in school projects or personal use.
 ### Workload Distribution
-#### Aaron Sell > data collection; matplotlib and seaborn visualizations
+#### Aaron Sell > data transformation; matplotlib and seaborn visualizations; powerpoint presentation
 
 #### Ange Ndjeka > data collection
 
-#### Denis Dragan > data collection; website construction
+#### Denis Dragan > data transformation; website construction
 
-#### Jason Hinshaw > data collection; website construction; postgreSQL database
+#### Jason Hinshaw > data transformation; website construction; postgreSQL database
 
 #### Tim Barney > data collection
 
-#### Summer Dowdy > Data Collection; README
+#### Summer Dowdy > data collection; README
 
 
 ## Directory
-### Resources 
+### Resources & Coding
 https://github.com/DDragan24/Project-3-TeamRavenClaw/tree/main/Resources
-### Script
-https://github.com/DDragan24/Project-3-TeamRavenClaw/tree/main/Scripts
 ### Website  
 https://jphinshaw.github.io/TxDeathRowData/index.html
 ### Presentation
